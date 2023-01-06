@@ -34,13 +34,36 @@ class Program
         {
             letter = "F";
         }
+
+        int result;
+
+        int remanNumber = Math.DivRem(number, 10, out result);    
         
-        
+        string mark = "";
+
+
+        if (remanNumber>= 7)
+        {
+            mark = "+";
+        }
+        else if (7> remanNumber && remanNumber <3)
+        {
+            mark = "";
+        }
+        else
+        {
+            mark = "-";
+        }
+
+
+
+
+
         if (number>70)
         {
-            Console.WriteLine($"You passed with an {letter}");
+            Console.WriteLine($"You passed with an {letter}{mark}");
         }
         else 
-            Console.WriteLine("You did not pass, but you will next time");
+            Console.WriteLine($"You got an {letter}{mark}. You did not pass, but you will next time");
     }
 }
