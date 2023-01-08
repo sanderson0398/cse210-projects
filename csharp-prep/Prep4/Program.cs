@@ -34,13 +34,35 @@ class Program
         }
         Console.WriteLine($"The sum is {sum}");
 
-        //find the average
-
-
+        //find the average. use float data type
+        float average = ((float)sum) / numList.Count;
+        Console.WriteLine($"The average is: {average}");   
 
         //find the max
+        int max = numList[0];
+
+        foreach(int number in numList)
+        {
+            if (number>max)
+            {
+                max = number;
+            }
+        }
+        Console.WriteLine($"The Max number is {max}");
+
 
         //find the min
+        int min = numList[0];
+
+        foreach(int number in numList)
+        {
+            if (number<min)
+            {
+                min = number;
+            }
+        }
+        Console.WriteLine($"The min number is {min}");
+
 
         //sort the list in order
 
