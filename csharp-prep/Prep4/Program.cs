@@ -25,6 +25,7 @@ class Program
 
 
         }
+        //foreach loop to add the sum of numbers
 
         int sum = 0;
         foreach (int number in numList)
@@ -32,6 +33,18 @@ class Program
             sum += number;
         }
         Console.WriteLine($"The sum is {sum}");
+
+        //find the average
+
+
+
+        //find the max
+
+        //find the min
+
+        //sort the list in order
+
+
 
 
 
