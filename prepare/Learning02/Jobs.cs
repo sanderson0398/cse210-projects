@@ -1,30 +1,14 @@
 using System;
 
-class Program
+public class Job
 {
-    static void Main(string[] args)
+    public string _jobTitle;
+    public string _company;
+    public int _startYear;
+    public int _endYear;
+
+    public void Display()
     {
-        public class Job;
-
-        Job job1 = new Job();
-        job1._jobTitle = "";
-        job1._company = "";
-        job1._startYear = ;
-        job1._endYear = ;
-
-/*
-        Job job2 = new Job();
-        job2._jobTitle = "Data Scientest";
-        job2._company = "Tesla";
-        job2._startYear = 2022;
-        job2._endYear = 2023;
-*/
-        Resume myResume = new Resume();
-        myResume._name = "Sam Anderson";
-
-        myResume._jobs.Add(job1);
-        //myResume._jobs.Add(job2);
-
-        myResume.Display();
+        Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}-{_endYear}");
     }
 }

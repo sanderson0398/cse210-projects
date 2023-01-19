@@ -2,33 +2,36 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
-    {
+    
         
         static void DisplayMessage()
         {
                 Console.WriteLine("Welcome to the Program! ");
         }
 
-        static void  PromptUserName()
+        static string  PromptUserName()
         {
                 Console.Write("Type User Name: ");
                 string name = Console.ReadLine();
+                return name;
+                
         }
+        
 
-        static void PromptUserNumber()
+        static int PromptUserNumber()
         {
-                Console.Write("Type User Number: ");
-                Console.ReadLine();
+                Console.Write("What is your favorite number?: ");
+                string favNumStr = Console.ReadLine();
+                int favNum = int.Parse(favNumStr);
+                return favNum;
+
         } 
 
-        static void SquareNumber()
+        static int SquareNumber(int num)
         {
-                
-                Console.Write("What is your favorite number?: ");
-                string favNum = Console.ReadLine();
-                int intFavNum = int.Parse(favNum);
-                int sqNum = intFavNum^2;         
+                        
+                int sqNum = num*num; //Math.Pow(num,2);
+                return sqNum;         
    
         }
 
@@ -39,16 +42,18 @@ class Program
         */
 
         static void DisplayResult(string name, int sqNum)
-            {
-                        Console.WriteLine($"Hello {name}, the square of your number is {sqNum}");
-            }
-            
-        DisplayMessage();
-        PromptUserName();
-        PromptUserNumber();
-        SquareNumber();
-        DisplayResult(name, sqNum);              
-
+        {
+                Console.WriteLine($"Hello {name}, the square of your number is {sqNum}");
+        }
+        static void Main(string[] args)
+        {       
+                DisplayMessage();
+                string name = PromptUserName();
+                                
+                int favNum = PromptUserNumber();
+                int sqNum = SquareNumber(favNum);
+                DisplayResult(name, sqNum);              
+        }
 
 
 
@@ -56,4 +61,3 @@ class Program
 
 
     }
-}
